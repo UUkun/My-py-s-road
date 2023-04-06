@@ -22,6 +22,8 @@ _讨厌的人有两种：_
 * _~~一是代码不写注释的~~_
 * _~~二是让我写注释的~~_
 
+---
+
 ### 初识变量
 ```python
 # 万恶之源
@@ -32,6 +34,8 @@ print('花费一个十连，还剩', primogem, '原石')
 ```
 *与变量的相逢总是平淡却不平凡*
 
+---
+
 ### 相遇的第一件事
 ```python
 print(type("name"))
@@ -39,6 +43,8 @@ print(type(primogem))
 print(type(2800.00))
 ```
 *君の名は。*
+
+---
 
 ### 神奇的格式变换
 ```python
@@ -56,6 +62,8 @@ print(type(atk_int), atk_int)  # 丢失精度
 ```
 *~~百变小樱~~*
 
+---
+
 ### 标识符的那些事
 ```python
 # 内容限定
@@ -70,6 +78,8 @@ print(name, Name)
 ```
 *现在是，我的回合*
 
+---
+
 ### （初识）运算符
 ```python
 # 运算符N则
@@ -83,6 +93,8 @@ print('9 ** 2 =', 9 ** 2)
 ```
 *犹豫，就会败北*
 
+---
+
 ### 面向字符串
 ```python
 # 字符串相关
@@ -94,4 +106,82 @@ print("\"使用转义\"")
 print("base ATK" + "608")
 # 使用占位符
 print("一共%s，抽了%d，打出了%f" % (primogem, 2800, attack))
+# 字符串格式化
+print("最终数值 %.0f" % attack)
+# 格式化方法2
+print(f"你至少应该为她流{attack}滴眼泪")
+# 运算符
+print("200爆伤，黄字：%.1f" % (attack*2))
+# 数据输入
+criticalDMG = input("输入爆伤(%)：")
+print("暴击，atk：%.1f" % (float(criticalDMG)*0.01*attack))
 ```
+结束p1
+
+---
+
+## yes or no
+
+### 认识布尔
+```python
+# 布尔类型
+ret = slime == hilichurl
+print(f"slime == hilichurl结果：{ret},类型是：{type(ret)}")
+
+```
+
+---
+
+### 使用if
+```python
+# if语句
+if attack > slime:
+    print("消灭了")
+print("还不够")
+```
+
+---
+
+### if与else的组合
+```python
+# if else 组合
+damage = int(input("输入伤害："))
+if damage > slime:
+    print("战胜史莱姆")
+else:
+    print("还不够")
+```
+
+---
+
+### if与elif的连击
+```python
+damage = int(input("再次输入伤害"))
+if damage > hilichurl:
+    print("战胜丘丘人")
+elif damage > slime:
+    print("战胜史莱姆")
+else:
+    print("还不够")
+```
+
+---
+
+### 嵌套QTE
+```python
+# 判断语句嵌套
+if int(input("1打死士，2打崩坏兽")) == 1:
+    if int(input("1选机械，2选异能")) == 1:
+        print("克制死士")
+    else:
+        print("被死士克制")
+else:
+    if int(input("1选生物，2选机械")) == 1:
+        print("克制崩坏兽")
+    else:
+        print("被崩坏兽克制")
+```
+结束p2
+
+---
+

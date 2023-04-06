@@ -54,3 +54,13 @@ print("\"使用转义\"")
 print("base ATK" + "608")
 # 使用占位符
 print("一共%s，抽了%d，打出了%f" % (primogem, 2800, attack))
+# 字符串格式化
+print("最终数值 %.0f" % attack)
+# 格式化方法2
+print(f"你至少应该为她流{attack}滴眼泪")
+# 运算符
+print("200爆伤，黄字：%.1f" % (attack*2))
+# 数据输入
+criticalDMG = input("输入爆伤(%)：")
+print("暴击，atk：%.1f" % (float(criticalDMG)*0.01*attack))
+
